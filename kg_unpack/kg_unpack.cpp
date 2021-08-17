@@ -129,7 +129,7 @@ void process(std::string FileName, std::string PngName) {
 			if (alpha != 0) {
 				for (int i = 0; i < count32; i++) {
 					//移位貌似行不通
-					//pixel = alpha << 18 | compressed[cdatap] << 10 | compressed[cdatap + 1] << 8 | compressed[cdatap + 2];
+					//pixel = (alpha << 18) | (compressed[cdatap] << 10) | (compressed[cdatap + 1] << 8) | compressed[cdatap + 2];
 					//memcpy(uncompressed + udatap, &pixel, 4);
 
 					uncompressed[udatap] = compressed[cdatap + 2];	//RB通道交换？
